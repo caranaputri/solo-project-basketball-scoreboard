@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basketball Scoreboard</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1>Basketball Scoreboard</h1>
+        <div class="container">
+
+            <div class="scoreboard">
+
+                <h2>HOME</h2>
+
+                <div class="score">
+                    <span id="home-score">0</span>
+                </div>
+
+                <div class="buttons-container">
+                    <button class="buttons" id="home-plus-1" onclick="addOneToHome()">+1</button>
+                    <button class="buttons" id="home-plus-2" onclick="addTwoToHome()">+2</button>
+                    <button class="buttons" id="home-plus-3" onclick="addThreeToHome()">+3</button>
+                </div>
+
+            </div>
+
+            <button class="buttons"id="reset-btn" onclick="reset()">NEW GAME</button>
+
+            <div class="scoreboard">
+
+                <h2>GUEST</h2>
+
+                <div class="score">
+                    <span id="guest-score">0</span>
+                </div>
+
+                <div class="buttons-container">
+                    <button class="buttons" id="guest-plus-1" onclick="addOneToGuest()">+1</button>
+                    <button class="buttons" id="guest-plus-2" onclick="addTwoToGuest()">+2</button>
+                    <button class="buttons" id="guest-plus-3" onclick="addThreeToGuest()">+3</button>
+                </div>
+
+            </div>
+
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

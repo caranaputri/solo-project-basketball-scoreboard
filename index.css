@@ -1,0 +1,107 @@
+html, body {
+  height: 100%;
+  min-height: 100vh; 
+}
+
+body {
+    margin: 150px;
+    color: #ffffff;
+    background-image: url('image/basketball.jpg');
+    background-size: cover;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    text-shadow: 0 0 4px #0C4A6E;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1B244A;
+    width: fit-content;
+    height: 400px;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #0284C7;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto 30px;
+    
+}
+
+h1 {
+    font-family: customTimer;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.score {
+    width: 120px;
+    margin: 10px 30px;
+    font-family: customTimer;
+    font-size: 100px;
+    padding: 5px 30px;
+    padding-top: 20px;
+    background-color: black;
+    border-radius: 15px;
+    text-align: end;
+    color: #881337;
+}
+
+
+.buttons-container {
+    margin: 20px;
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+
+}
+
+.buttons {
+    font-family: customTimer;
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: #1B244A;
+    color: white;
+    border: solid 2px white;
+    border-radius: 5px;
+}
+
+
+.buttons:hover {
+    background-color: white;
+    color: #0369A1;
+    cursor: pointer;
+}
+
+#reset-btn {
+    margin: 280px 0;
+    height: 50px;
+    width: 140px;
+    background-color: #881337;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#reset-btn:hover{
+    background-color: #FB7185;
+    transform: scale(125%);
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: customTimer;
+    src: url(font/CursedTimerUlil-Aznm.ttf);
+}
