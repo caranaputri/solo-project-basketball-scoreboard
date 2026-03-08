@@ -1,23 +1,36 @@
 html, body {
-  height: 100%;
-  min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; /* make it full screen */
 }
 
 body {
-    margin: 150px;
+    margin: 0;
+    padding: 20px;
     color: #ffffff;
     background-image: url('image/basketball.jpg');
     background-size: cover;
     box-sizing: border-box;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     text-align: center;
     text-shadow: 0 0 4px #0C4A6E;
+
+    /* center it */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     background-color: #1B244A;
     width: fit-content;
     height: 400px;
@@ -86,7 +99,7 @@ h2 {
 }
 
 #reset-btn {
-    margin: 280px 0;
+    margin: 20px auto;
     height: 50px;
     width: 140px;
     background-color: #881337;
@@ -104,4 +117,48 @@ h2 {
 @font-face {
     font-family: customTimer;
     src: url(font/CursedTimerUlil-Aznm.ttf);
+}
+
+/* I know  might be repeating myself and a lot of redundancy involved. But hey, I'm still learning */
+
+
+/* haven't got to the responsive design yet, this is with AI help. gonna learn it next time */
+/* for mobile devices */
+@media (max-width: 600px) {
+    body {
+        /* Fixes disappearing title by starting layout from the top */
+        justify-content: flex-start; 
+        padding-top: 40px; 
+        margin: 0; 
+    }
+
+    h1 {
+        font-size: 32px; /* Smaller, manageable size for mobile */
+        margin-bottom: 20px;
+        order: -1; /* Forces title to the absolute top */
+    }
+
+    .container {
+        flex-direction: column; 
+        width: 90%;
+        height: auto; 
+        gap: 20px;
+        padding: 30px 10px;
+    }
+
+    /* Fixes Reset Button position */
+    .scoreboard:nth-child(1) { order: 1; } /* Home first */
+    .scoreboard:nth-child(3) { order: 2; } /* Away second */
+    
+    #reset-btn {
+        order: 3; /* Now it definitely stays at the bottom */
+        margin: 10px auto;
+        position: static; /* Ensures no weird overlaps */
+    }
+
+    .score {
+        width: 120px;
+        font-size: 80px;
+        margin: 10px auto;
+    }
 }
